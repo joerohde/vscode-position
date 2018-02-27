@@ -1,8 +1,8 @@
 {
-    "name": "jtr-position",
-    "displayName": "jtr.position",
+    "name": "vscode-position",
+    "displayName": "vscode-position",
     "description": "Get and Set cursor position by byte offset",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "jtr",
     "engines": {
         "vscode": "^1.20.0"
@@ -11,14 +11,22 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "position.goto",
+                "title": "Go To Position"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "position.goto",
+                "key": "ctrl+alt+g",
+                "mac": "ctrl+cmd+g",
+                "when": "editorTextFocus"
             }
         ]
     },

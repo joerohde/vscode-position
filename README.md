@@ -1,6 +1,6 @@
-# jtr-position README
+# vscode-position README
 
-This is the README for your extension "jtr-position". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "vscode-position". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

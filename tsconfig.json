@@ -4,10 +4,9 @@
         "target": "es6",
         "outDir": "out",
         "lib": [
-            "es6"
+            "es6", "es2016.array.include"
         ],
         "sourceMap": true,
-        "rootDir": "src",
         /* Strict Type-Checking Option */
         "strict": true,   /* enable all strict type-checking options */
         /* Additional Checks */
@@ -16,8 +15,7 @@
         // "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
         // "noUnusedParameters": true,  /* Report errors on unused parameters. */
     },
-    "exclude": [
-        "node_modules",
-        ".vscode-test"
-    ]
+    "files": [
+        "extension.ts",
+    ],
 }
