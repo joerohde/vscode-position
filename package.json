@@ -1,24 +1,38 @@
 {
-    "name": "jtr-position",
-    "displayName": "jtr.position",
+    "name": "vscode-position",
+    "displayName": "vscode-position",
     "description": "Get and Set cursor position by byte offset",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "jtr",
+    "license": "MIT",
+    "icon": "other/icon.png",
     "engines": {
-        "vscode": "^1.20.0"
+        "vscode": "^1.13.0"
     },
     "categories": [
         "Other"
     ],
+    "galleryBanner": {
+        "color": "#516084",
+        "theme": "dark"
+    },
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "position.goto",
+                "title": "Go to Position"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "position.goto",
+                "key": "ctrl+alt+g",
+                "mac": "ctrl+cmd+g",
+                "when": "editorTextFocus"
             }
         ]
     },
@@ -28,6 +42,10 @@
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joerohde/vscode-position"
     },
     "devDependencies": {
         "typescript": "^2.6.1",

@@ -11,7 +11,9 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--disable-extensions",
+                "D:\\Source\\Misc\\Dracula"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"
