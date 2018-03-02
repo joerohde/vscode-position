@@ -1,3 +1,4 @@
+[![](https://vsmarketplacebadge.apphb.com/version-short/jtr.vscode-position.svg)](https://marketplace.visualstudio.com/items?itemName=jtr.vscode-position)
 # vscode-position README
 
 This is the README "vscode-position".  I had been using the [Positions](https://github.com/Silvenga/vscode-positions) extension for seeing the offset but had a need to set the position by offset easily.  So I wrote this, partially because the mentioned extension to learn a bit about typescript.  As I finished I came across [show-offset](https://github.com/ramya-rao-a/show-offset) which I wish I'd run across initially.  Nevertheless, I had added a couple unique features when I wrote this, so I figured I'd toss it into the gallery.
