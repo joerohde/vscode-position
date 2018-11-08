@@ -25,7 +25,7 @@ function getOptionalNumber(numberAsString ?: string): [number | undefined, boole
     let isRelative: boolean = false;
 
     let num: number = Number(numberAsString);
-    if (!isNaN(num)) {
+    if (!isNaN(num) && numberAsString && numberAsString.length) {
         optionalNumber = num;
         isRelative = ['+', '-'].includes(numberAsString!.charAt(0));
     }
@@ -39,6 +39,7 @@ class PositionController {
     constructor() {
         this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
         this.statusBarItem.command = 'position.goto';
+        this.statusBarItem.tooltip = "Go to Position";
 
         // subscribe to selection change and editor activation events
         let subscriptions: vscode.Disposable[] = [];
@@ -50,7 +51,7 @@ class PositionController {
         this.updatePosition();
     }
 
-    public goToPositionCommand(position?: number): void {
+    public goToPositionCommand(): void {
          // declaring manager? as optional makes .then/async blocks 'forget' the
          // definite assignment/null check inference done after Create() in tslint.
         let manager: CursorManager;
@@ -65,8 +66,7 @@ class PositionController {
                 return undefined;
             }
         }).then((input?: string) => {
-            let [newOffset] = getOptionalNumber(input);
-            newOffset !== undefined ? manager.commit() : manager.abort();
+            input !== undefined ? manager.commit() : manager.abort();
         });
     }
 
@@ -189,9 +189,8 @@ class CursorManager {
         this.editor.setDecorations(CursorManager.CursorPositionDecoration, []);
     }
 
-    private reveal(revealTypeOptional?: vscode.TextEditorRevealType): void {
-        let revealType: vscode.TextEditorRevealType = revealTypeOptional || vscode.TextEditorRevealType.InCenterIfOutsideViewport;
+    private reveal(revealType?: vscode.TextEditorRevealType): void {
+        revealType = revealType || vscode.TextEditorRevealType.InCenterIfOutsideViewport;
         this.editor.revealRange(this.editor.selection, revealType);
     }
-
 }

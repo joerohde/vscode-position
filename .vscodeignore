@@ -5,6 +5,9 @@ out/**/*.map
 src/**
 .gitignore
 tsconfig.json
+<<<<<<< HEAD
 vsc-extension-quickstart.md
+=======
+>>>>>>> c7f83a91e626cf98a985300df6b74a00123da015
 tslint.json
 extension.ts
