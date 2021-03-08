@@ -19,6 +19,9 @@
     "activationEvents": [
         "*"
     ],
+    "extensionKind": [
+        "ui"
+    ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
