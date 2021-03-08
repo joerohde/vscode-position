@@ -176,6 +176,7 @@ class CursorManager {
     public commit() {
         this.clearDecorations();
         this.editor.selection = this.cachedSelections[0];
+        vscode.window.showTextDocument(this.document, { selection: this.cachedSelections[0] });
     }
 
     public abort() {
