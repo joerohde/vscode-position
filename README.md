@@ -23,6 +23,12 @@ None
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.3
+(Cumulative)
+- Fix 'Enter' leaving position at new location
+- Fix extensionKind to properly support ui/workspaces for web Codespaces
+
 ### 1.0.0
 
 Initial release.
