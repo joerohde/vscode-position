@@ -53,9 +53,9 @@ class PositionController {
 
     public goToPositionCommand(): void {
          // declaring manager? as optional makes .then/async blocks 'forget' the
-         // definite assignment/null check inference done after Create() in tslint.
+         // definite assignment/null check inference done after create() in tslint.
         let manager: CursorManager;
-        manager = CursorManager.Create()!;
+        manager = CursorManager.create()!;
         if (!manager) { return; }
 
         vscode.window.showInputBox({
@@ -71,7 +71,7 @@ class PositionController {
     }
 
     private updatePosition(): void {
-        let manager = CursorManager.Create();
+        let manager = CursorManager.create();
         if (!manager) {
             this.statusBarItem.hide();
             return;
@@ -97,7 +97,7 @@ class PositionController {
 }
 
 class CursorManager {
-    private static CursorPositionDecoration = vscode.window.createTextEditorDecorationType({
+    private static cursorPositionDecoration = vscode.window.createTextEditorDecorationType({
         borderColor: new vscode.ThemeColor('editor.foreground'),
         borderStyle: 'solid',
         borderWidth: '1px',
@@ -115,7 +115,7 @@ class CursorManager {
     //     isWholeLine: true,
     // });
 
-    public static Create()
+    public static create()
     {
         let editor = vscode.window.activeTextEditor;
         let doc = editor ? editor.document : undefined;
@@ -168,7 +168,7 @@ class CursorManager {
             success = true;
         }
         const range = new vscode.Range(this.cursor, this.cursor.translate(0, 1));
-        this.editor.setDecorations(CursorManager.CursorPositionDecoration, [range]);
+        this.editor.setDecorations(CursorManager.cursorPositionDecoration, [range]);
         this.reveal();
         return success;
     }
@@ -187,7 +187,7 @@ class CursorManager {
     }
 
     private clearDecorations(): void {
-        this.editor.setDecorations(CursorManager.CursorPositionDecoration, []);
+        this.editor.setDecorations(CursorManager.cursorPositionDecoration, []);
     }
 
     private reveal(revealType?: vscode.TextEditorRevealType): void {
