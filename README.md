@@ -10,6 +10,7 @@ This is the README "vscode-position".  I had been using the [Positions](https://
 - New position is previewed while typing it in (similar to goto line)
 - Cursor and selection restored if setting position is abandoned with <kbd>esc</kbd>
 - Cursor position can also be <kbd>+</kbd><kbd>*number*</kbd> or <kbd>-</kbd><kbd>*number*</kbd> for moving the cursor relative to the current position.
+- Works as a web extension in online hosts vscode.
 
 > Initial keybinding for `Go To Position`: <kbd>⌃</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd> (Mac:  <kbd>⌃</kbd>+<kbd>⌘</kbd>+<kbd>G</kbd>)
 
@@ -24,6 +25,10 @@ None
 
 ## Release Notes
 
+### 1.1.1
+Supports web extension context for online vscode.
+Still exports traditional extension model for back compat to 1.40.0
+Internal project restructuring to webpack to support web worker context.
 ### 1.0.3
 (Cumulative)
 - Fix 'Enter' leaving position at new location
