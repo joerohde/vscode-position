@@ -42,7 +42,7 @@ const webExtensionConfig: webpack.Configuration = {...commonConfig, ...{
 		devtoolModuleFilenameTemplate: '../../[resource-path]'
 	},
 	resolve: {
-		mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
+		mainFields: ['browser', 'module'], // look for `browser` entry point in imported node modules
 		extensions: ['.ts', '.js'], // support ts-files and js-files
 		alias: {
 			// provides alternate implementation for node module and source files
@@ -75,6 +75,7 @@ const desktopConfig: webpack.Configuration =  {...commonConfig, ...{
         devtoolModuleFilenameTemplate: "../[resource-path]",
     },
     resolve: { // support reading TypeScript and JavaScript files, -> https://github.com/TypeStrong/ts-loader
+		mainFields: ['main'], // look for entry point in imported node modules
         extensions: ['.ts', '.js']
     },
 }};

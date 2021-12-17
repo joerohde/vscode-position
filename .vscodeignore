@@ -1,9 +1,9 @@
 .vscode/**
 .vscode-test-web/**
 src/**
-dist/**
 node_modules/**
 .gitignore
+.nvmrc
 vsc-extension-quickstart.md
 webpack.config.ts
 .yarnrc
