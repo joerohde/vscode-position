@@ -1,7 +1,7 @@
 [![](https://vsmarketplacebadge.apphb.com/version-short/jtr.vscode-position.svg)](https://marketplace.visualstudio.com/items?itemName=jtr.vscode-position)
 # vscode-position README
 
-I very simple extension to show current character position/offset, and ability to set the cursor position interactively with preview.  Note that this extension is now compatible with the web context of vscode, and commits around Dec 2021 can be looked at for the changes needed.  It is straight forward for a simple extension without complex external requirements (including Node APIs themselves).
+A very simple extension to show current character position/offset, and ability to set the cursor position interactively with preview.  Note that this extension is now compatible with the web context of vscode, and commits around Dec 2021 can be looked at for the changes needed.  It is straight forward for a simple extension without complex external requirements (including Node APIs themselves).
 
 I had been using the [Positions](https://github.com/Silvenga/vscode-positions) extension for seeing the offset but had a need to set the position by offset easily.  So I wrote this, partially because the mentioned extension to learn a bit about typescript.  As I finished I came across [show-offset](https://github.com/ramya-rao-a/show-offset) which I wish I'd run across initially.  Nevertheless, I had added a couple unique features when I wrote this, so I figured I'd toss it into the gallery.
 
