@@ -7,7 +7,7 @@ I had been using the [Positions](https://github.com/Silvenga/vscode-positions) e
 
 ## Features
 
-- Shows cursor character offset as 'Pos \<position>' in the status bar.
+- Shows cursor character offset as 'Pos \<position>' (name configurable through 'Position Name' settings in Settings > Extensions > vscode-position) in the status bar.
 - Click the status bar or use the `Go To Position` palette command to move the cursor by offset.
 - New position is previewed while typing it in (similar to goto line)
 - Cursor and selection restored if setting position is abandoned with <kbd>esc</kbd>
