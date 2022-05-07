@@ -35,7 +35,6 @@ function getOptionalNumber(numberAsString ?: string): [number | undefined, boole
 class PositionController {
     private disposable: vscode.Disposable;
     private statusBarItem: vscode.StatusBarItem;
-    private positionName: string;
 
     constructor() {
         this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
