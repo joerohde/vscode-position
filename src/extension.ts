@@ -81,7 +81,8 @@ class PositionController {
 
         if (offset !== undefined) {
             // Update the status bar
-            this.statusBarItem.text = `Pos ${offset}`;
+            let positionName = vscode.workspace.getConfiguration('vscode-position').positionName || 'Pos';
+            this.statusBarItem.text = `${positionName} ${offset}`;
             this.statusBarItem.show();
         }
     }

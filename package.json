@@ -39,7 +39,17 @@
                 "mac": "ctrl+cmd+g",
                 "when": "editorTextFocus"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "vscode-position",
+            "properties": {
+                "vscode-position.positionName": {
+                    "type": "string",
+                    "default": "Pos",
+                    "description": "Display name of position on status bar."
+                }
+            }
+        }
     },
     "scripts": {
         "build": "npm run compile-web",
